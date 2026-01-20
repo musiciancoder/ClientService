@@ -1,4 +1,4 @@
-package org.acme.controller;
+package org.acme.resource;
 
 import jakarta.annotation.security.PermitAll;
 import jakarta.ws.rs.*;
