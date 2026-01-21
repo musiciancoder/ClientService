@@ -30,30 +30,71 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- RESTEasy for REST endpoints -->
+
+        <!-- Quarkus core -->
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy</artifactId>
+            <artifactId>quarkus-resteasy-reactive</artifactId>
         </dependency>
 
-        <!-- JSON serialization -->
+        <!-- JSON-B for serialization of TransferEvent, Transaction, etc. -->
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-jackson</artifactId>
+            <artifactId>quarkus-jsonb</artifactId>
         </dependency>
 
-        <!-- Hibernate ORM with Panache -->
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-reactive-messaging</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
+        </dependency>
+
+        <!-- Optional: Persist Transaction entities -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-hibernate-orm-panache</artifactId>
         </dependency>
 
-        <!-- Database driver (H2 for dev/test, replace with PostgreSQL/MySQL in prod) -->
-<!--        <dependency>
+        <!-- Jakarta Validation -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
+
+
+        <!-- Optional: H2 for dev/test -->
+        <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>-->
+        </dependency>
+
+        <!--        Rest Client-->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client-jackson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-micrometer-registry-prometheus</artifactId>
+        </dependency>
+
+
 
         <dependency>
             <groupId>io.quarkus</groupId>
